@@ -2,7 +2,7 @@
 C++ Project template that is built with CMake and Conan Package Manager. This project is a "work in progress".
 
 ## Build Status
-[![Build Status](https://travis-ci.com/Portfence/cpp_project.svg?branch=main)](https://travis-ci.com/Portfence/cpp_project)
+[![Build Status](https://travis-ci.com/Portfence/producer.svg?branch=main)](https://travis-ci.com/Portfence/producer)
 
 
 ## Pre-requisites
@@ -14,18 +14,18 @@ $ sudo snap install conan
 ## Install as Conan Package
 Located under ```~/.conan/data```
 ```
-$ cd cpp_project
+$ cd producer
 $ conan create . <user>/<version>
 # e.g.
 $ conan create . mando/stable
 ```
-To use the created pacakge in another project, add ```"requires = cpp_project/1.0.0@mando/stable"``` to the other projects conanfile.py
+To use the created pacakge in another project, add ```"requires = producer/1.0.0@mando/stable"``` to the other projects conanfile.py
 
 ## To develop in project
 
 ### Install dependencies
 ```
-$ cd cpp_project
+$ cd producer
 $ conan install . -if build
 ```
 ### Build project

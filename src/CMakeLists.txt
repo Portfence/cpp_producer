@@ -1,7 +1,7 @@
 # ##### The 'src' directory is a standalone project #####
 cmake_minimum_required(VERSION 3.16.3 FATAL_ERROR)
 
-project(cpp_project CXX)
+project(producer CXX)
 
 # For finding dependencies with Conan Package Manager
 set(CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR} ${CMAKE_MODULE_PATH})
@@ -12,7 +12,6 @@ find_package(plog CONFIG REQUIRED)
 
 add_library(${PROJECT_NAME} SHARED
     lib_source_a.cpp
-    lib_source_b.cpp
 )
 
 target_compile_features(${PROJECT_NAME}
@@ -30,7 +29,7 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE $<INSTALL_INTERFACE:include/${PROJECT_NAME}>
 )
 
-# Clients use #include <cpp_project/lib_source_XXX.h>
+# Clients use #include <producer/lib_source_XXX.h>
 target_include_directories(${PROJECT_NAME}
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     PUBLIC $<INSTALL_INTERFACE:include>

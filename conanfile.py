@@ -2,11 +2,11 @@ from conans import ConanFile, CMake, tools
 
 
 class CXXProjectConan(ConanFile):
-    name = "cpp_project"
+    name = "producer"
     version = "1.0.0"
     license = "MIT License"
     author = "Albert Havnegjerde alberthavnegjerde@gmail.com"
-    url = "https://github.com/Portfence/cpp_project.git"
+    url = "https://github.com/Portfence/producer.git"
     description = "Example of a CXX Project using cmake_find_package_multi generator"
     settings = "os", "compiler", "build_type", "arch"
     requires = "doctest/2.3.4@bincrafters/stable", \
